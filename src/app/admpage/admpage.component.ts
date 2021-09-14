@@ -10,6 +10,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 export class AdmpageComponent implements OnInit {
 
  constructor(private router: Router, private activatedroute: ActivatedRoute) { }
+ 
 
   ngOnInit(): void {
   }
