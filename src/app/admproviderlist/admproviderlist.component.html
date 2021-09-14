@@ -1,0 +1,47 @@
+<div class="container mx-auto " style="padding:0px;margin:0px">
+   <h4 style=" margin-bottom:10px; margin-top:0px;padding:0px">Providers</h4>
+   <div class="form-group" style="width:40%">
+        <input type="text" class="form-control" placeholder="Search Here" [(ngModel)]="term">
+  </div>
+</div>
+ 
+<div class="container mx-auto border" style="padding:0px;margin:0px">
+
+  <table class="table table-bordered table-striped">
+  <caption>There are no patients you are seeing now.</caption>
+    <thead>
+      <tr>
+        <th>Patient No</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Number of calls</th> 
+        <th>Number of texts</th>
+
+      </tr>
+    </thead>  
+    <tbody>
+
+      <tr *ngFor="let item of patients | filter:term" class ="clickable" (click)="showDetail(item)">
+
+        <td>{{item.patientId}}</td>
+        <td>{{item.firstName}}</td>
+        <td>{{item.lastName}}</td>
+        <td>{{item.gender}}</td>
+        <td>{{item.age}}</td>
+        <td>{{item.phone}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.numcalls}}</td>
+        <td>{{item.numtexts}}</td>
+
+
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+
+

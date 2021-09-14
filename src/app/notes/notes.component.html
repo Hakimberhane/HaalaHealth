@@ -1,0 +1,39 @@
+<div class="container mx-auto border" style="padding:0px;margin:0px">
+
+  <table class="table table-bordered table-striped">
+  <caption [hidden]="true">There are no patients you are seeing now.</caption>
+    <thead>
+      <tr>
+        <th>Date</th>  
+        <th>Notes</th>  
+
+      </tr>
+    </thead>  
+    <tbody>
+      <tr class ="clickable" (click)="showDetail(item)">
+        <td>January 1st 2020, 9:30AM</td>
+        <td>Has some fever, coughing and ordered prescription</td>
+        <td>
+        <p style="display:inline;color:blue">Edit  </p>
+        <p style="display:inline;color:blue">Remove</p>
+        </td>
+
+      </tr>
+      <tr class ="clickable" (click)="showDetail(item)">
+        <td>January 28th 2020, 9:30AM</td>
+        <td>No symptoms</td>
+        <td>
+        <p style="display:inline;color:blue">Edit  </p>
+        <p style="display:inline;color:blue">Remove</p>
+        </td>
+
+      </tr>
+     
+     
+    </tbody>
+  </table>
+<button type="button" class="btn btn-primary">Create a note</button>
+
+</div>
+
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+   <head> 
+      <meta charset="UTF-8"> 
+      <meta name="viewport" 
+            content="width=device-width, initial-scale=1.0"> 
+      <link rel="stylesheet" href= 
+"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> 
+   </head> 
+   <body> 
+
+<!-- main app container -->
+    <h5 class="pl-3 pb-0">Providers available</h5>
+
+
+        <div class="container mx-auto " style="padding:0px;margin:0px">
+           <div class="form-group" style="width:40%;margin-left:15px">
+                <input type="text" class="form-control" placeholder="Search Here" [(ngModel)]="term">
+          </div>
+        </div>
+
+
+<div class="card text-center m-3">
+    <div class="card-body">
+
+    <table class="table table-bordered table-striped">
+  <caption>There are 3 providers available now.</caption>
+    <thead>
+      <tr>
+        <th>Provider Id</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Choose a provider</th>
+
+      </tr>
+    </thead>  
+    <tbody>
+      <tr *ngFor="let item of pageOfItems | filter:term;  let i = index" class ="clickable" (click)="showDetail(item)">
+
+        <td>{{item.providerId}}</td>
+        <td>{{item.firstName}}</td>
+        <td>{{item.lastName}}</td>
+        <td>{{item.phone}}</td>
+        <td>{{item.email}}</td>
+        <td>
+    <button #val1 type="button" id=i class="btn btn-primary dabutton" [ngClass]="{'positive' : item.providerId === currentAssignedPrvId}" (click)="assign($event.target,item)">
+    {{item.providerId === currentAssignedPrvId? "Active":text}}
+    </button>
+       </td>
+      </tr>
+    </tbody>
+  </table>
+        
+    </div>
+    <div class="card-footer pb-0 pt-3">
+        <jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
+    </div>
+</div>
+
+<!-- credits -->
+<div class="text-center">
+    <p>
+        <a href="https://jasonwatmore.com/post/2020/04/29/angular-9-simple-pagination-example" target="_top">Angular 9 - Simple Pagination Example</a>
+    </p>
+    <p>
+        <a href="https://jasonwatmore.com" target="_top">JasonWatmore.com</a>
+    </p>
+</div>
+
+
+<div class="dropdown">
+  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+
+</body>
+</html>

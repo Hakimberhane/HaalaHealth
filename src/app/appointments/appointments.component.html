@@ -1,0 +1,33 @@
+<div class="container mx-auto border" style="padding:0px;margin:0px">
+
+  <table class="table table-bordered table-striped">
+  <caption [hidden]="true">There are no patients you are seeing now.</caption>
+    <thead>
+      <tr>
+        <th>Appointments</th>  
+        <th>Type</th>  
+
+      </tr>
+    </thead>  
+    <tbody>
+      <tr class ="clickable" (click)="showDetail(item)">
+        <td>January 1st 2020, 9:30AM</td>
+        <td>Call</td>
+        <p style="display:inline;color:blue">Remove</p>
+
+      </tr>
+      <tr class ="clickable" (click)="showDetail(item)">
+        <td>January 28th 2020, 9:30AM</td>
+        <td>Call</td>
+        <p style="display:inline;color:blue">Remove</p>
+
+      </tr>
+     
+     
+    </tbody>
+  </table>
+<button type="button" class="btn btn-primary">Make an appointment</button>
+
+</div>
+
+

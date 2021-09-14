@@ -1,0 +1,19 @@
+.dabutton:hover, .dabutton:active {
+  color: #ffffff !important;
+  background-color: green !important;
+  border-color: #494F57 !important;
+}
+
+.dbutton:hover, .dbutton:active, .dbutton:focus {
+  color: #ffffff !important;
+  background-color: green !important;
+  border-color: #494F57 !important;
+}
+
+.positive {
+    background-color: green;
+}
+
+.negative {
+    background-color: gray;
+}

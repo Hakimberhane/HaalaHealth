@@ -1,0 +1,65 @@
+<br>
+<div class="container mx-auto " style="padding:0px;margin:0px">
+
+   <h4 style=" margin-bottom:10px;padding:0px">Patients</h4>
+   <div class="form-group" style="width:40%">
+        <input type="text" class="form-control" placeholder="Search Here" [(ngModel)]="term">
+  </div>
+</div>
+ 
+<div class="container mx-auto border" style="padding:0px;margin:0px">
+
+  <table class="table table-bordered table-striped">
+  <caption>There are {{patientslist.length}} patients.</caption>
+    <thead>
+      <tr>
+        <th>Patient No</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Date          mvjvik</th> 
+        <th>Status</th>
+        <th>Notes</th>
+      </tr>
+    </thead>  
+    <tbody>
+
+      <tr *ngFor="let item of patientslist | filter:term" class ="clickable" (click)="showDetail(item)">
+
+        <td>{{item.patientId}}</td>
+        <td>{{item.firstName}}</td>
+        <td>{{item.lastName}}</td>
+        <td>{{item.gender}}</td>
+        <td>{{item.age}}</td>
+        <td>{{item.phone}}</td>
+        <td>{{item.email}}</td>
+<td class="table-entry">
+<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        revenue
+                    </button>
+                <select (change)="onActionSelected($event)">
+                  <option>revenue</option>
+                  <option>enter expense</option>
+                </select>
+              </td>        
+        <td>
+         <div class="dropdown">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Active
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Active</a>
+                        <a class="dropdown-item" href="#">Inactive</a>
+                    </div>
+                </div>
+       </td>
+        <td>{{item.numtexts}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+

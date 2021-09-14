@@ -1,0 +1,125 @@
+
+<div class="container">
+<div class="row flex-lg-nowrap">
+  <div class="col">
+    <div class="row">
+      <div class="col mb-3">
+
+        <div class="card border-bottom-0">
+          <div class="card-body">
+            <div class="e-profile">
+              <div class="row">
+                <div class="col-12 col-sm-auto mb-3">
+                  <div class="mx-auto" style="width: 140px;">
+                    <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
+                      <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
+                  <div class="text-center text-sm-left mb-2 mb-sm-0">
+                    <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">{{provider.firstName}} {{provider.lastName}}</h4>
+                   <div class="text-muted"><small>{{provider.speciality}}</small></div>
+
+                    <p class="mb-0">{{provider.email}}</p>
+                    <p class="mb-0">Phone: {{provider.phone}}</p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         <div class="card border-top-0">
+          <div class="card-body">
+           <p class="card-title" style="padding-left:0px;margin-top:-15px;color:#03a8a6"> Career Background </p>
+               <div class="row">
+                <div class="col mb-3">
+                   {{provider.background}}
+                </div>
+               </div>
+          </div>
+        </div>
+
+         <div class="card border-top-1" style="margin-top:10px">
+          <div class="card-body">
+               <div class="row">
+                <div class="col mb-3">
+                   <p style="padding-bottom:0px; margin:0px;color:#03a8a6">SPECIALITIES </p>
+                   <p style="padding:0px;margin-bottom:8px;padding-left:5px">{{provider.speciality}}</p>
+                  <p style="padding-bottom:0px; margin:0px;color:#03a8a6">EXPERIENCE </p>
+                   <p style="padding:0px;margin-bottom:8px;padding-left:5px">{{provider.yearsofexp}} + years</p>
+                </div>
+               </div>
+          </div>
+        </div>
+
+
+ <h4 style="padding-left:10px;color:#03a8a6;margin-top:10px;margin-bottom:10px"> Academics & Trainings </h4>
+    <div class="card border-top-1">
+    <div class="card-body">
+
+     <img style="height:30px; width:30px;display:flex;position:absolute" src="assets/icon/diploma1.jpg">
+     <div style="margin-left:40px">
+          <h5 style="padding-bottom:1px;color:black">{{provider.firstachievment}}</h5>
+          <p style="padding-bottom:0px;margin-bottom:0px;padding-left:4px">{{provider.firstintitution}},{{provider.firstInsCity}},{{provider.firstInsRegion}}</p>
+          <p style="padding-bottom:5px;padding-left:4px">2018</p>
+     </div>
+   
+   <div *ngIf="provider.secondachievment">
+     <img style="height:30px; width:30px;display:flex;position:absolute" src="assets/icon/diploma1.jpg">
+     <div style="margin-left:40px">
+          <h5 style="padding-bottom:1px;color:black">{{provider.secondachievment}}</h5>
+          <p style="padding-bottom:0px;margin-bottom:0px;padding-left:4px">{{provider.secondinstitution}}, {{provider.secondInsCity}},{{provider.secondInsRegion}}</p>
+          <p style="padding-bottom:5px;padding-left:4px">2019</p>
+     </div>
+  </div>  
+   
+   <div *ngIf="provider.thirdachievment">
+     <img style="height:30px; width:30px;display:flex;position:absolute" src="assets/icon/diploma1.jpg">
+     <div style="margin-left:40px">
+          <h5 style="padding-bottom:1px;color:black">{{provider.thirdachievment}} </h5>
+          <p style="padding-bottom:0px;margin-bottom:0px;padding-left:4px">{{provider.thirdinstitution}}, {{provider.thirdInsCity}},{{provider.thirdInsRegion}}</p>
+          <p style="padding-bottom:5px;padding-left:4px">2019</p>
+     </div>
+  </div>  
+
+
+</div>
+</div>
+      </div>
+
+      <div class="col-12 col-md-3 mb-3">
+        <div class="card mb-3">
+          <div class="card-body">
+            <div class="px-xl-3">
+              <button class="btn btn-block btn-secondary" (click)="goToProviderEditPage()">
+                <i class="fa fa-edit"></i>
+                <span>Edit</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-title font-weight-bold">Support</h6>
+            <p class="card-text"><span style="color:green">Phone</span>: +251944311213</p>
+            <p class="card-text"><span style="color:green">Email</span>: haala@gmail.com</p>
+            <button type="button" class="btn btn-primary">Contact Us</button>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+

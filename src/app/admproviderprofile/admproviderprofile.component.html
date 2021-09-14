@@ -1,0 +1,110 @@
+
+<div class="container"  style="width:1000px">
+<div class="row flex-lg-nowrap">
+  <div class="col">
+    <div class="row">
+      <div class="col mb-3">
+
+        <div class="card border-bottom-0">
+          <div class="card-body">
+            <div class="e-profile">
+              <div class="row">
+                <div class="col-12 col-sm-auto mb-3">
+                  <div class="mx-auto" style="width: 140px;">
+                    <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
+                      <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
+                  <div class="text-center text-sm-left mb-2 mb-sm-0">
+                    <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">{{providerData.firstName}} {{providerData.lastName}} ({{providerData.title}}) </h4>
+                   <div class="text-muted"><small>{{providerData.address}}, {{providerData.city}}, {{providerData.region}}, {{providerData.country}}</small></div>
+
+                    <p class="mb-0">Email:{{providerData.email}}</p>
+                    <p class="mb-0">Phone: {{providerData.phone}}</p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         <div class="card border-top-0">
+          <div class="card-body">
+           <p class="card-title" style="padding-left:0px;margin-top:-15px;color:#03a8a6"> Career Background </p>
+               <div class="row">
+                <div class="col mb-3">
+                   {{providerData.background}}
+                </div>
+               </div>
+          </div>
+        </div>
+
+         <div class="card border-top-1" style="margin-top:10px">
+          <div class="card-body">
+               <div class="row">
+                <div class="col mb-3">
+                   <p style="padding-bottom:0px; margin:0px;color:#03a8a6">SPECIALITY </p>
+                   <p style="padding:0px;margin-bottom:8px;padding-left:5px">{{providerData.speciality}}</p>
+                  <p style="padding-bottom:0px; margin:0px;color:#03a8a6">EXPERIENCE </p>
+                   <p style="padding:0px;margin-bottom:8px;padding-left:5px">{{providerData.yearsofexp}} + years</p>
+                </div>
+               </div>
+          </div>
+        </div>
+
+
+ <h4 style="padding-left:10px;color:#03a8a6;margin-top:10px;margin-bottom:10px"> Academics & Trainings </h4>
+         <div class="card border-top-1">
+          <div class="card-body">
+
+      <img style="height:30px; width:30px;display:flex;position:absolute" src="assets/icon/diploma1.jpg">
+      <div style="margin-left:40px">
+		 <h5 style="padding-bottom:1px;color:black">{{providerData.firstachievment}}</h5>
+		 <p style="padding-bottom:0px;margin-bottom:0px;padding-left:4px">{{providerData.firstintitution}},{{providerData.firstInsCity}},{{providerData.firstInsRegion}},{{providerData.firstInsCountry}}</p>
+		 <p style="padding-bottom:5px;padding-left:4px">2018</p>
+      </div>
+
+     <div *ngIf="providerData.secondinstitution!=null"> 
+      <img style="height:30px; width:30px;display:flex;position:absolute" src="assets/icon/diploma1.jpg">
+	  <div style="margin-left:40px">
+		 <h5 style="padding-bottom:1px;color:black">{{providerData.secondachievment}} </h5>
+		 <p style="padding-bottom:0px;margin-bottom:0px;padding-left:4px">{{providerData.secondinstitution}}, {{providerData.secondInsCity}},{{providerData.secondInsRegion}},{{providerData.secondInsCountry}}</p>
+		 <p style="padding-bottom:5px;padding-left:4px">2019</p>
+      </div>
+     </div> 
+
+     <div *ngIf="providerData.thirdinstitution!=null"> 
+      <img style="height:30px; width:30px;display:flex;position:absolute" src="assets/icon/diploma1.jpg">
+	  <div style="margin-left:40px">
+		 <h5 style="padding-bottom:1px;color:black">{{providerData.thirdachievment}} </h5>
+		 <p style="padding-bottom:0px;margin-bottom:0px;padding-left:4px">{{providerData.thirdinstitution}},{{providerData.thirdInsCity}}, {{providerData.thirdInsRegion}},{{providerData.thirdInsCountry}}</p>
+		 <p style="padding-bottom:5px;padding-left:4px">2019</p>
+      </div>
+     </div> 
+
+</div>
+</div>
+      </div>
+
+      <div class="col-12 col-md-3 mb-3">
+       
+      </div>
+      
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+

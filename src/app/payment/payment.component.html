@@ -1,0 +1,66 @@
+<br>
+<div class="container mx-auto " style="padding:0px;margin:0px">
+
+   <h4 style=" margin-bottom:10px;padding:0px">Payments <span style="color:lighgrey;font-size:16px">(Due on Jan 31 2020)</span></h4>
+
+</div>
+ 
+<div class="container mx-auto border" style="padding:0px;margin:0px">
+
+  <table class="table table-bordered table-striped">
+  <caption [hidden]="true">There are no patients you are seeing now.</caption>
+    <thead>
+      <tr>
+        <th>Patient No</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Date</th>
+        <th>Visit Type</th>
+        <th>Fee</th>
+        <th>Deduction</th>
+        <th>Sub Total</th>
+
+
+      </tr>
+    </thead>  
+    <tbody>
+
+      <tr class ="clickable" (click)="showDetail(item)">
+
+        <td>p001</td>
+        <td>Andrew</td>
+        <td>Thomas</td>
+        <td>Jan 23 2020</td>
+        <td>Call</td>
+        <td>70</td>
+        <td>15</td>
+        <td>55</td>
+
+      
+
+      </tr>
+
+       <tr class ="clickable" (click)="showDetail(item)">
+
+        <td>p003</td>
+        <td>Mariamme</td>
+        <td>Thomas</td>
+        <td>Jan 27 2020</td>
+        <td>Text</td>
+        <td>70</td>
+        <td>15</td>
+        <td>55</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+          <h5 style="display:inline">Total</h5>          
+          <h5 style="display:inline;margin-right:50px;color:green " class="float-right">$110</h5> 
+  </div>    
+  <div>
+          <p style="color:green"> $356 (Last payment pending)</p> 
+  </div>                  
+
+</div>
+
+
